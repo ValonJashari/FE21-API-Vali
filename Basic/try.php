@@ -29,19 +29,20 @@
     </head>
 
     <body>
-    <div class="container">
-        <div class="row">
-
-            <div class="col-sm-12">
-                <h3>Serri Joke </h3>
-              <marquee>
-              <?php
-              echo $parsing->joke;
-              ?>
-              </marquee>
-                </p>
-            </div>
-        </div>
+    <div class="p-3 mb-2 bg-primary text-white">
+        
+                <h3 class = "text-warning text-center">Here is the Serri Joke:  </h3>
+                <div class="p-3 mb-2 bg-success text-white">
+                    <marquee>
+                    <?php
+                    echo $parsing->joke;
+                    ?>
+                    </marquee>
+                     
+                    </p>
+                </div> 
+            
+        
     </div>
                 
     </body>
