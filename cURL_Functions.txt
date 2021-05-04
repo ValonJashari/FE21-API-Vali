@@ -1,0 +1,20 @@
+curl_getinfo()
+curl_init() - Initialize a cURLsession and return a cURL handle for use with
+curl_setopt(),curl_exec() & curl_close().
+CURLOPT_URL 
+
+curl_setopt() -- set an option for a curl transfer
+curl_exec() -- Perform a cURL session, execute the given cURL session. After curl session and all options are set, this should be used.
+Returns true on success or false on failure. 
+However, if the CURLOPT_RETURNTRANSFER option is set, it will return the:
+result on success, false on failure.
+
+curl_close() -- Close a cURL session & frees all resources.
+
+If you set CURLOPT_RETURNTRANSFER to true or 1 then the return value from curl_exec will be the actual result from the successful operation.
+ In other words it will not return TRUE on success. Although it will return FALSE on failure.
+
+As described in the Return Values section of curl-exec PHP manual page: http://php.net/manual/function.curl-exec.php
+
+You should enable the CURLOPT_FOLLOWLOCATION option for redirects but this would be a problem if your server is in safe_mode and/or open_basedir is in effect which can cause issues with curl as well.
+
